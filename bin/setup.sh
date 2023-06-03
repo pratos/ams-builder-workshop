@@ -15,6 +15,21 @@ else
     echo "  > Nix is already installed."
 fi
 
+echo "  > Installing lxml related dependencies"
+OS=$(uname)
+
+if [ "$OS" == "Darwin" ]; then
+    echo "This is a macOS system. Installing with brew..."
+    # Brew installation command here
+    brew install libxml2 libxslt
+elif [ "$OS" == "Linux" ]; then
+    echo "This is a Linux system. Installing with apt..."
+    # Apt installation command here
+    sudo apt-get install libxml2 libxslt1-dev
+else
+    echo "Unknown operating system."
+fi
+
 echo "  > Adding 'use flake' to .envrc"
 touch .envrc && echo "use flake" >> .envrc
 direnv allow

@@ -13,6 +13,7 @@
 
         locales = pkgs.glibcLocales;
         python310 = pkgs.python3Minimal;
+        lxml = pkgs.python3Packages.lxml;
         poetry = pkgs.poetry;
         gum = pkgs.gum;
 
@@ -23,6 +24,7 @@
           buildInputs = [
             locales
             python310
+            lxml
             poetry
             gum
           ];
