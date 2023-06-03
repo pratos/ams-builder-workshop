@@ -1,7 +1,7 @@
-.vscode
-.DS_store
+.vscode/
+.DS_store/
 .envrc
-.direnv
+.direnv/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
