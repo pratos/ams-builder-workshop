@@ -9,10 +9,12 @@ packages = [{include = "src/"}]
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
 langflow = "^0.0.81"
+jupyterlab = "^4.0.1"
+datasets = "^2.12.0"
+ipywidgets = "^8.0.6"
 
 
 [tool.poetry.group.dev.dependencies]
-jupyter = "^1.0.0"
 ruff = "^0.0.270"
 
 [build-system]
